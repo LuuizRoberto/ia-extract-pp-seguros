@@ -1,0 +1,31 @@
+Seu objetivo é ler o PDF anexo e extrair informações específicas com 100% de precisão.
+
+        Campos a serem extraídos:
+        - nome_segurado (String)
+        - cpf (String, apenas números)
+        - telefone (String, com DDD)
+        - seguradora (String)
+        - valor_seguro (Float, usar ponto como separador decimal)
+        - data_vigencia_inicio (Data, formato YYYY-MM-DD)
+        - data_vigencia_fim (Data, formato YYYY-MM-DD)
+        - placa_carro (String)
+        - modelo_carro (String)
+
+        Regras Estritas:
+        1. Se um campo não for encontrado, retorne null.
+        2. Retorne APENAS o JSON puro, sem blocos de código Markdown (como ```json).
+        3. Datas devem estar estritamente no formato ISO (YYYY-MM-DD).
+        4. O campo valor_seguro deve ser numérico.
+
+        Exemplo de Saída Esperada:
+        {
+            "nome_segurado": "JOÃO DA SILVA",
+            "cpf": "12345678901",
+            "telefone": "11988887777",
+            "seguradora": "Porto Seguro",
+            "valor_seguro": 1550.50,
+            "data_vigencia_inicio": "2024-01-10",
+            "data_vigencia_fim": "2025-01-10",
+            "placa_carro": "ABC1D23",
+            "modelo_carro": "Toyota Corolla"
+        }
